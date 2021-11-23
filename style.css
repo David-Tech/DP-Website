@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+
+*{
+margin: 0;
+padding: 0;
+font-family: 'Work Sans', sans-serif;
+text-decoration: none;
+box-sizing: border-box;
+list-style: none;
+}
+body{
+    background: #ffffff;
+    color:rgb(16, 16, 22);
+    position: relative;
+}
+.dark-mode{
+    background:rgb(32, 32, 32);
+    color: ghostwhite;
+}
+.dark-mode .top5anime{
+    background: ghostwhite;
+    color: rgb(16, 16, 22);
+}
+.dark-mode .topnav .btn span::before,
+.dark-mode .topnav .btn span::after,
+.dark-mode .topnav .btn span{
+    background: rgb(255, 255, 255);
+}
+.dark-mode .topnav ul li a{
+    color: rgb(255, 255, 255);
+}
+.dark{
+    color: rgb(255, 255, 255);
+    background: rgb(32, 32, 32);
+}
+.dark-mode .dark{
+    color: rgb(32, 32, 32);
+    background: ghostwhite;
+}
+
+
+.logo{
+    top: 0;
+    left: 0;
+}
+
+.introGrid{
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: auto auto;
+}
+.portfolioPic{
+    border-radius: 15px;
+    padding: 0;
+    width: 273px;
+    height: 368px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+}
+.intoInfo{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.animeRambles {
+    padding: 0;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.topnav .btn{
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    display: inline-block;
+    height: 35px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    transition: background 0.3s;
+    width: 35px;
+    border: none;
+
+}
+.btn span{
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    background: rgb(0, 0, 0);
+    display: block;
+    height: 3px;
+    right: 5px;
+    transition: transform 0.3s;
+}
+.btn span:before,
+.btn span:after {
+
+    width: 100%;
+    height: 3px;
+    background:rgb(0, 0, 0);
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+
+}
+.topnav .btn span::before{
+top:-8px;
+}
+.topnav .btn span::after{
+bottom: -8px;
+}
+.topnav .b span .active span{
+    transform: rotate(90deg);
+}
+.innernav{
+    right: 100%;
+    left: 0;
+    align-items: center;
+    justify-content: space-between;
+    mix-blend-mode: difference;
+    z-index: 100;
+
+}
+.topnav ul{
+    position: fixed;
+    top: 60px;
+    right: 5px;
+    height: 100vh;
+    visibility: hidden;
+    pointer-events: none;
+    list-style: none;
+    width: 35px;
+      
+}
+.topnav ul li{
+    font: bold 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0.75em 0;
+    writing-mode: vertical-lr;
+}
+nav.active ul{
+  visibility: visible;
+  pointer-events: initial;
+  transition-delay: 0.2s;
+
+}
+.topnav ul li a{
+    width: 120px;
+	margin-right: 100%;
+	display:list-item;
+	text-align: center;
+	padding: 1px;
+	color: rgb(48, 26, 26);
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: 2px;
+	transition: all 0.2s ease;
+}
+
+.main_container{
+    margin: auto;
+    padding: 100px 0;
+    width: 50%;
+    position: relative;
+}
+.active .btn span {
+    transform: rotate(90deg);
+  }
+
+.feedback{
+    bottom:0;
+    position: absolute;
+    text-align: center;
+    padding: 10px 15px;
+}
+.top5anime{
+    background-color: rgb(37, 37, 37);
+    color: rgb(255, 255, 255);
+    padding: 0;
+    margin: 40;
+    display: block;
+    text-align:justify;
+    border-radius: 10px;
+    text-align: justify;
+}
+.guts{
+    display: block;
+    padding: 0;
+    margin: 20;
+
+}
+.jslogo{
+    height: 30;
+    width: 30;
+}
+.language{
+    text-align: right;
+    margin: 0;
+    
+}
+

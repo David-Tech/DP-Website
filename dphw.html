@@ -1,0 +1,142 @@
+<!DOCTYPE 'html'>
+
+<html lang = "en">
+
+    <head>
+        <title> DavePage </title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="Syntax Highlighter/prism.css">
+    </head>
+
+    <body>
+        <script src="darkMode.js"></script>
+        <button onclick= "darkMode()" type="button" class="dark">Toggle Darkmode</button>
+        <nav id="topnav" class="topnav"> 
+            <button class ="btn" id="btn"> <span></span></button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!--<li><a href= "projects.html">Projects</a></li> -->
+                <li><a href="dphw.html">Homework</a></li>
+            </ul>
+        </nav>
+        
+        <div class="main_container">
+        
+        <h1>Homework</h1>
+        <p class="description">Homework assignments for IS448 </p>
+        <h1>4.4</h1>
+        <p class="language"> Javascript  </p> 
+            <pre>
+                <code class="language-javascript">
+        length = prompt("Please enter the amount of terms");
+        if (length == 0){
+        document.write(0);
+        }
+        else if(length &lt; 0 ){
+            document.write("Please enter an amount greater than zero")
+        }
+        else{
+            let n1 = 0;
+            let n2 = 1;
+            let count = 0;
+            while (count &lt; length){
+                document.write(n1, ", ");
+                nxt = n1 + n2;
+                n1 = n2;
+                n2 = nxt;
+                count+= 1;
+                }
+        }
+                </code>
+            </pre>
+        <h1>6.3</h1>
+        <p class="language">HTML</p>
+            <pre>
+                <code class="language-html">
+
+        &lt;input type="button" onclick="copies(0);" value="None" />
+        &lt;input type="button" onclick="copies(1);" value="One" />
+        &lt;input type="button" onclick="copies(2);" value="Two" />
+        &lt;input type="button" onclick="copies(3);" value="Three" />
+        &lt;input type="button" onclick="copies(4);" value="Four" />
+
+                </code>
+            </pre>
+            <p class="language">CSS</p>
+            <pre>
+                <code class="language-css">
+        .myStory
+        {
+        margin-left: auto; 
+        margin-right: auto; 
+        width:70em; 
+        text-align: justify; 
+        }
+        img{
+        height:20px; 
+        width:20px;
+        position: relative;
+        top:0px; 
+        left:850px;
+        }
+        #copies{
+            width:auto;
+            position: absolute;
+            }
+                </code>
+            </pre>
+            <p class="language">Javacript</p>
+            <pre>
+                <code class="language-javascript">
+        function copies(n){
+
+            img = document.getElementById("img").getAttribute("src");
+            
+            str = "";
+            
+            for(i=0; i&lt;n; i++){
+            
+            str+="&lt;img src='"+img+"'/>";
+            
+            }
+            
+            document.getElementById("copies").innerHTML=str;
+            
+            }
+                </code>
+            </pre>
+        <h1>9.5</h1>
+        <p class="language">PHP</p>
+        <pre>
+            
+            <code class="language-clike">
+                &lt;?php
+                function getFirstFourDigitNumber($string){
+                    $numbers = explode(" ", $string);
+                    foreach($numbers as $number) {
+                        if (4 == strlen($number)) {
+                        return $number;
+                        }
+                    }
+                    return false;
+                }
+                    echo getFirstFourDigitNumber('1 123 1234 12345');
+                ?>
+            </code>
+        </pre>
+
+        </div>
+        <div class="feedback">
+            <form action = "" id="fb">
+                <p id="fback">
+                How does the website look? Leave feedback here: <input type = "User Feedback" name = "feedback" size = "60" />
+                </p>
+            </form>
+        </div>
+        <!-- always put javacript that affects the body of the html at the end of the body -->
+        <script src="dp.js"></script>
+        <script src="Syntax Highlighter/prism.js"></script>
+    </body>
+
+</html>
